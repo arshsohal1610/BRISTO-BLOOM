@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bistro Bloom | Menu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+
+
+     <!-- ================= MENU HERO ================= -->
+
+<section class="menu-hero">
+
+    <div class="menu-overlay"></div>
+
+    <div class="menu-hero-content">
+
+        <h4>Luxury Indian Fine Dining</h4>
+
+        <h1>Our Menu</h1>
+
+        <p>
+            Crafted with the finest seasonal ingredients,
+            blending timeless Indian flavors with modern culinary artistry.
+        </p>
+
+    </div>
+
+</section>
+
+    <!-- Categories -->
+
+    <!-- ================= MENU FILTER ================= -->
+
+<section class="menu-filter">
+
+    <h2>Explore Our Menu</h2>
+
+    <p>
+        Choose a category and discover our handcrafted dishes.
+    </p>
+
+    <div class="filter-buttons">
+
+    <button class="active" data-filter="all">All</button>
+
+    <button data-filter="starter">Starters</button>
+
+    <button data-filter="main">Main Course</button>
+
+    <button data-filter="special">Chef's Specials</button>
+
+    <button data-filter="dessert">Desserts</button>
+
+    <button data-filter="drink">Beverages</button>
+
+</div>
+</section>
+
+    <!-- Menu Cards -->
+<!-- ================= MENU CARDS ================= -->
+
+<section class="menu-container" id="menuContainer">
+
+
+    <div class="menu-card" data-category="starter">
+
+    <img src="images/starter1.jpg" alt="Burrata Chaat">
+
+    <div class="menu-info">
+
+        <div class="menu-title">
+
+            <h3>Burrata Chaat</h3>
+
+            <span>₹495</span>
+
+        </div>
+
+        <p>
+            Creamy burrata served with crispy papdi, tangy chutneys, and fresh herbs.
+        </p>
+
+        <small>Starter</small>
+
+    </div>
+    
+</div>
+
+<div class="menu-card" data-category="starter">
+
+    <img src="images/starter2.jpg" alt="Smoked Paneer Tikka">
+
+    <div class="menu-info">
+
+        <div class="menu-title">
+
+            <h3>Smoked Paneer Tikka</h3>
+
+            <span>₹525</span>
+
+        </div>
+
+        <p>
+            Char-grilled cottage cheese infused with spices and served with mint dip.
+        </p>
+
+        <small>Starter</small>
+
+    </div>
+
+</div>
+
+<div class="menu-card" data-category="main">
+
+    <img src="images/butter-chicken.jpg" alt="Butter Chicken">
+
+    <div class="menu-info">
+
+        <div class="menu-title">
+
+            <h3>Butter Chicken</h3>
+
+            <span>₹695</span>
+
+        </div>
+
+        <p>
+            Succulent chicken cooked in a rich tomato and butter gravy,
+            finished with fresh cream and aromatic Indian spices.
+        </p>
+
+        <small>Main Course</small>
+
+    </div>
+
+</div>
+
+<div class="menu-card" data-category="main">
+
+    <img src="images/creamy-mushroom-pasta.jpg" alt="Truffle Mushroom Risotto">
+
+    <div class="menu-info">
+
+        <div class="menu-title">
+
+            <h3>Truffle Mushroom Risotto</h3>
+
+            <span>₹750</span>
+
+        </div>
+
+        <p>
+            Creamy arborio rice with wild mushrooms, parmesan, and truffle oil.
+        </p>
+
+        <small>Main Course</small>
+
+    </div>
+    
+</div>
+
+<div class="menu-card" data-category="special">
+
+    <img src="images/special1.jpg" alt="Grilled Salmon">
+
+    <div class="menu-info">
+
+        <div class="menu-title">
+
+            <h3>Grilled Salmon</h3>
+
+            <span>₹899</span>
+
+        </div>
+
+        <p>
+            Norwegian salmon grilled to perfection with herb butter and vegetables.
+        </p>
+
+        <small>Chef's Special</small>
+
+    </div>
+
+</div>
+
+<div class="menu-card" data-category="special">
+
+    <img src="images/special2.jpg" alt="Creamy Herb Pasta">
+
+    <div class="menu-info">
+
+        <div class="menu-title">
+
+            <h3>Creamy Herb Pasta</h3>
+
+            <span>₹650</span>
+
+        </div>
+
+        <p>
+            Fresh pasta tossed in creamy garlic sauce with parmesan and herbs.
+        </p>
+
+        <small>Chef's Special</small>
+
+    </div>
+
+</div>
+
+<div class="menu-card" data-category="dessert">
+
+    <img src="images/dessert1.jpg" alt="Rose Pistachio Cheesecake">
+
+    <div class="menu-info">
+
+        <div class="menu-title">
+
+            <h3>Rose Pistachio Cheesecake</h3>
+
+            <span>₹425</span>
+
+        </div>
+
+        <p>
+            Smooth cheesecake infused with rose essence and topped with pistachios.
+        </p>
+
+        <small>Dessert</small>
+
+    </div>
+
+</div>
+
+<div class="menu-card" data-category="drink">
+
+    <img src="images/drink1.jpg" alt="Cold Brew Coffee">
+
+    <div class="menu-info">
+
+        <div class="menu-title">
+
+            <h3>Cold Brew Coffee</h3>
+
+            <span>₹220</span>
+
+        </div>
+
+        <p>
+            Slow-steeped premium coffee served chilled with subtle chocolate notes.
+        </p>
+
+        <small>Beverage</small>
+
+    </div>
+
+</div>
+
+</section>
+
+
+    <!-- Reservation CTA -->
+     <!-- ================= MENU CTA ================= -->
+
+<section class="menu-cta">
+
+    <div class="cta-content">
+
+        <h2>Found Something You'll Love?</h2>
+
+        <p>
+            Reserve your table today and experience luxury dining,
+            handcrafted flavors, and exceptional hospitality.
+        </p>
+
+        <a href="index.html#reservation" class="primary-btn">
+            Reserve Your Table
+        </a>
+
+    </div>
+
+</section>
+
+    <!-- Footer -->
+
+    <!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+
+            <h2>Bistro Bloom</h2>
+
+            <p>
+                Where elegance meets unforgettable flavours.
+                Experience fine dining crafted with passion and
+                served with excellence.
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="#">Home</a></li>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#menu">Menu</a></li>
+
+                <li><a href="#reservation">Reservation</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="footer-contact">
+
+            <h3>Contact</h3>
+
+            <p>📞 +91 98765 43210</p>
+
+            <p>✉ reservations@bistrobloom.com</p>
+
+            <p>📍 Ludhiana, Punjab</p>
+
+        </div>
+
+        <div class="footer-hours">
+
+            <h3>Opening Hours</h3>
+
+            <p>Monday - Friday</p>
+
+            <span>11:00 AM - 11:00 PM</span>
+
+            <br><br>
+
+            <p>Saturday - Sunday</p>
+
+            <span>10:00 AM - 12:00 AM</span>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+
+        <p>© 2026 Bistro Bloom. All Rights Reserved.</p>
+
+    </div>
+
+</footer>
+
+
+    <script src="menu.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

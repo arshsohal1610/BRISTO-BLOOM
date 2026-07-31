@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bistro Bloom | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Dashboard -->
+
+    <section class="admin-dashboard">
+
+        <div class="dashboard-header">
+
+            <h1>🍽 Bistro Bloom Admin</h1>
+
+            <p>Manage Reservations</p>
+
+        </div>
+
+        <div class="dashboard-cards">
+
+    <div class="dashboard-card">
+        <h2 id="totalReservations">0</h2>
+        <p>Total Reservations</p>
+    </div>
+
+    <div class="dashboard-card">
+        <h2 id="todayReservations">0</h2>
+        <p>Today's Reservations</p>
+    </div>
+
+    <div class="dashboard-card">
+        <h2 id="upcomingReservations">0</h2>
+        <p>Upcoming Reservations</p>
+    </div>
+
+    <div class="dashboard-card">
+        <h2 id="totalGuests">0</h2>
+        <p>Total Guests</p>
+    </div>
+
+    <div class="dashboard-card">
+        <h2 id="totalContacts">0</h2>
+        <p>Contact Messages</p>
+    </div>
+
+    <div class="dashboard-card">
+        <h2 id="pendingReservations">0</h2>
+        <p>Pending Reservations</p>
+    </div>
+
+</div>
+
+<div class="search-box">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by Name, Email or Phone..."
+        onkeyup="searchReservations()"
+    >
+</div>
+
+<div class="filter-buttons">
+
+    <button onclick="filterReservations('All')">
+        All
+    </button>
+
+    <button onclick="filterReservations('Pending')">
+        Pending
+    </button>
+
+    <button onclick="filterReservations('Confirmed')">
+        Confirmed
+    </button>
+
+</div>
+
+        <div class="reservation-table">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Name</th>
+
+                        <th>Email</th>
+
+                        <th>Phone</th>
+
+                        <th>Date</th>
+
+                        <th>Time</th>
+
+                        <th>Guests</th>
+
+                        <th>Message</th>
+
+                        <th>status</th>
+
+                        <th>action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="reservationData">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <section>
+
+    <h2>Contact Messages</h2>
+
+    <div class="reservation-table">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Subject</th>
+                    <th>Message</th>
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="contactData">
+
+            </tbody>
+
+
+        </table>
+
+    </div>
+
+</section>
+
+
+
+
+<section class="menu-management">
+
+    <h2>Manage Menu</h2><br>
+
+    <form id="menuForm" enctype="multipart/form-data">
+
+        <input
+            type="text"
+            id="menuName"
+            placeholder="Item Name"
+            required
+        >
+
+        <input
+            type="text"
+            id="menuCategory"
+            placeholder="Category"
+            required
+        >
+
+        <input
+            type="number"
+            id="menuPrice"
+            placeholder="Price"
+            required
+        >
+
+        <textarea
+            id="menuDescription"
+            placeholder="Description"
+            required
+        ></textarea>
+
+        <input
+            type="file"
+            id="menuImage"
+            accept="image/*"
+        >
+
+        <button type="submit">
+
+            Add Menu Item
+
+        </button>
+
+    </form>
+
+    <br>
+
+    <div class="reservation-table">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Image</th>
+
+                    <th>Name</th>
+
+                    <th>Category</th>
+
+                    <th>Price</th>
+
+                    <th>Description</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="menuData">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+    <script src="admin.js"></script>
+<div id="reservationModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <div id="reservationDetails"></div>
+
+    </div>
+
+</div>
+</body>
+
+</html>
