@@ -31,7 +31,7 @@ reservationForm.addEventListener("submit", async function (e) {
 
     try {
 
-        const response = await fetch("https://bristo-bloom-backend.onrender.com/api/reservations", {
+        const response = await fetch("http://localhost:5000/api/reservations", {
 
             method: "POST",
 
