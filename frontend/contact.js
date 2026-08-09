@@ -25,7 +25,7 @@ if(contactForm){
 
 
             const response = await fetch(
-                "http://localhost:5000/api/contacts",
+                `${API_BASE_URL}/api/contacts`,
                 {
                     method:"POST",
 

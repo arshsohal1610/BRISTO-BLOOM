@@ -6,7 +6,7 @@ async function loadMenu() {
 
     try {
 
-        const response = await fetch("http://localhost:5000/api/menu");
+        const response = await fetch(`${API_BASE_URL}/api/menu`);
 
         const data = await response.json();
 
@@ -23,7 +23,7 @@ async function loadMenu() {
 
                 <div class="dish-card">
 
-                    <img src="http://localhost:5000/uploads/${item.image}" alt="${item.name}">
+                    <img src="${API_BASE_URL}/uploads/${item.image}" alt="${item.name}">
 
                     <div class="dish-content">
 
@@ -59,7 +59,7 @@ async function loadMenu() {
 
                 <div class="menu-card" data-category="${category}">
 
-                    <img src="http://localhost:5000/uploads/${item.image}" alt="${item.name}">
+                    <img src="${API_BASE_URL}/uploads/${item.image}" alt="${item.name}">
 
                     <div class="menu-info">
 

@@ -20,8 +20,7 @@ async function loadReservations() {
 
     try {
 
-        const response = await fetch("http://localhost:5000/api/reservations");
-
+        const response = await fetch(`${API_BASE_URL}/api/reservations`);
         const data = await response.json();
 
         allReservations = data.reservations;
@@ -40,9 +39,7 @@ async function loadContacts(){
 
     try{
 
-        const response = await fetch(
-            "http://localhost:5000/api/contacts"
-        );
+        const response = await fetch(`${API_BASE_URL}/api/contacts`);
 
 
         const data = await response.json();
@@ -124,9 +121,9 @@ if(menuForm){
 
            const url = editingMenuId
 
-            ? `http://localhost:5000/api/menu/${editingMenuId}`
+            ? `${API_BASE_URL}/api/menu/${editingMenuId}`
 
-            : "http://localhost:5000/api/menu";
+            : `${API_BASE_URL}/api/menu`;
 
            const method = editingMenuId ? "PUT" : "POST";
 
@@ -161,7 +158,7 @@ async function loadMenu(){
     try{
 
         const response = await fetch(
-            "http://localhost:5000/api/menu"
+            `${API_BASE_URL}/api/menu`
         );
 
         const data = await response.json();
@@ -178,7 +175,7 @@ async function loadMenu(){
                 <td>
 
                     <img
-                        src="http://localhost:5000/uploads/${item.image}"
+                        src="${API_BASE_URL}/uploads/${item.image}"
                         width="70"
                         height="70"
                         style="border-radius:8px; object-fit:cover;"
@@ -238,7 +235,7 @@ async function deleteMenu(id){
     try{
 
         await fetch(
-            `http://localhost:5000/api/menu/${id}`,
+            `${API_BASE_URL}/api/menu/${id}`,
             {
                 method:"DELETE"
             }
@@ -260,7 +257,7 @@ async function editMenu(id) {
     try {
 
         // Fetch all menu items
-        const response = await fetch("http://localhost:5000/api/menu");
+        const response = await fetch(`${API_BASE_URL}/api/menu`);
         const data = await response.json();
 
         // Find selected item
@@ -402,7 +399,7 @@ async function deleteReservation(id) {
 
     try {
 
-        await fetch(`http://localhost:5000/api/reservations/${id}`, {
+        await fetch(`${API_BASE_URL}/api/reservations/${id}`, {
 
             method: "DELETE"
 
@@ -431,7 +428,7 @@ async function deleteContact(id){
     try{
 
         await fetch(
-            `http://localhost:5000/api/contacts/${id}`,
+            `${API_BASE_URL}/api/contacts/${id}`,
             {
                 method:"DELETE"
             }
@@ -460,7 +457,7 @@ async function confirmReservation(id) {
 
         const response = await fetch(
 
-            `http://localhost:5000/api/reservations/${id}`,
+            `${API_BASE_URL}/api/reservations/${id}`,
 
             {
 
